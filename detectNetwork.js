@@ -74,93 +74,94 @@ var detectNetwork = function(cardNumber) {
       type = "Switch"
     } else if (/^4/.test(cardNumber)) {
       type = "Visa"
+    } else if (/^50(18|20|38)/.test(cardNumber)) {
+      type = "Maestro"
     } else if (/^5[1-5]/.test(cardNumber)) {
       type = "MasterCard"
     } else if (/^6011/.test(cardNumber)) {
       type = "Discover"
+    } else if (cardNumber.substr(0,6) >= 622126 && cardNumber.substr(0,6) <= 622925) {
+      type = "China UnionPay"
+    } else if (/^62[4-6]/.test(cardNumber)) {
+      type = "China UnionPay"
+    } else if (/^628[2-8]/.test(cardNumber)) {
+      type = "China UnionPay"
+    } else if (/^6304/.test(cardNumber)) {
+      type = "Maestro"
     } else if (/^64[4-9]/.test(cardNumber)) {
       type = "Discover"
     } else if (/^65/.test(cardNumber)) {
       type = "Discover"
-    } else if (/^50(18|20|38)/.test(cardNumber)) {
-      type = "Maestro"
-    } else if (/^6304/.test(cardNumber)) {
-      type = "Maestro"
-    } else if (/^[622126-622925]/.test(cardNumber)) {
-      type = "China UnionPay"
-    } else if (/^[624-626]/.test(cardNumber)) {
-      type = "China UnionPay"
-    } else if (/^[6282-6288]/.test(cardNumber)) {
-      type = "China UnionPay"
     }
     
     
   } else if (cardLength === 17) {
     if (/^50(18|20|38)/.test(cardNumber)) {
       type = "Maestro"
+    } else if (cardNumber.substr(0,6) >= 622126 && cardNumber.substr(0,6) <= 622925) {
+      type = "China UnionPay"
+    } else if (/^62[4-6]/.test(cardNumber)) {
+      type = "China UnionPay"
+    } else if (/^628[2-8]/.test(cardNumber)) {
+      type = "China UnionPay"
     } else if (/^6304/.test(cardNumber)) {
       type = "Maestro"
-    } else if (/^[622126-622925]/.test(cardNumber)) {
-      type = "China UnionPay"
-    } else if (/^[624-626]/.test(cardNumber)) {
-      type = "China UnionPay"
-    } else if (/^[6282-6288]/.test(cardNumber)) {
-      type = "China UnionPay"
     }
     
   } else if (cardLength === 18) {
     if (/^49(03|05|11|36)/.test(cardNumber)) {
       type = "Switch"
+    } else if (/^50(18|20|38)/.test(cardNumber)) {
+      type = "Maestro"
     } else if (/^564182/.test(cardNumber)) {
       type = "Switch"
+    } else if (cardNumber.substr(0,6) >= 622126 && cardNumber.substr(0,6) <= 622925) {
+      type = "China UnionPay"
+    } else if (/^62[4-6]/.test(cardNumber)) {
+      type = "China UnionPay"
+    } else if (/^628[2-8]/.test(cardNumber)) {
+      type = "China UnionPay"
+    } else if (/^6304/.test(cardNumber)) {
+      type = "Maestro"
     } else if (/^633110/.test(cardNumber)) {
       type = "Switch"
     } else if (/^6333/.test(cardNumber)) {
       type = "Switch"
     } else if (/^6759/.test(cardNumber)) {
       type = "Switch"
-    } else if (/^50(18|20|38)/.test(cardNumber)) {
-      type = "Maestro"
-    } else if (/^6304/.test(cardNumber)) {
-      type = "Maestro"
-    } else if (/^[622126-622925]/.test(cardNumber)) {
-      type = "China UnionPay"
-    } else if (/^[624-626]/.test(cardNumber)) {
-      type = "China UnionPay"
-    } else if (/^[6282-6288]/.test(cardNumber)) {
-      type = "China UnionPay"
     }
     
     
   } else if (cardLength === 19) {
     if (/^49(03|05|11|36)/.test(cardNumber)) {
       type = "Switch"
+    } else if (/^4/.test(cardNumber)) {
+      type = "Visa"
+    } else if (/^50(18|20|38)/.test(cardNumber)) {
+      type = "Maestro"
     } else if (/^564182/.test(cardNumber)) {
       type = "Switch"
+    } else if (/^6011/.test(cardNumber)) {
+      type = "Discover"
+    } else if (/^628[2-8]/.test(cardNumber)) {
+      type = "China UnionPay"
+    } else if (/^6304/.test(cardNumber)) {
+      type = "Maestro"
     } else if (/^633110/.test(cardNumber)) {
       type = "Switch"
     } else if (/^6333/.test(cardNumber)) {
       type = "Switch"
-    } else if (/^6759/.test(cardNumber)) {
-      type = "Switch"
-    } else if (/^4/.test(cardNumber)) {
-      type = "Visa"
-    } else if (/^6011/.test(cardNumber)) {
-      type = "Discover"
     } else if (/^64[4-9]/.test(cardNumber)) {
       type = "Discover"
     } else if (/^65/.test(cardNumber)) {
       type = "Discover"
-    } else if (/^50(18|20|38)/.test(cardNumber)) {
-      type = "Maestro"
-    } else if (/^6304/.test(cardNumber)) {
-      type = "Maestro"
-    } else if (/^[622126-622925]/.test(cardNumber)) {
+    } else if (/^6759/.test(cardNumber)) {
+      type = "Switch"
+    } else if (cardNumber.substr(0,6) >= 622126 && cardNumber.substr(0,6) <= 622925) {
       type = "China UnionPay"
-    } else if (/^[624-626]/.test(cardNumber)) {
+    } else if (/^62[4-6]/.test(cardNumber)) {
       type = "China UnionPay"
-    } else if (/^[6282-6288]/.test(cardNumber)) {
-      type = "China UnionPay"
+
     }
   }
   
@@ -176,13 +177,4 @@ var detectNetwork = function(cardNumber) {
 
 //do i want to try regex?
 
-//console.log(detectNetwork('343456789012345'))
-//console.log(detectNetwork('373456789012345'))
-//console.log(detectNetwork('38345678901234'))
-//console.log(detectNetwork('39345678901234'))
-//console.log(detectNetwork('31345678901234'))
-//console.log(detectNetwork('333456789012345'))
-//console.log(detectNetwork('4123456789012'))
-//console.log(detectNetwork('4123456789012345'))
-//console.log(detectNetwork('4123456789012345678'))
-//console.log(detectNetwork('6229207890123456'))
+console.log(detectNetwork('6221261234567890'))

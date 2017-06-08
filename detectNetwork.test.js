@@ -367,82 +367,88 @@ describe('Maestro', function() {
 
 describe('China UnionPay', function() {
   var should = chai.should();
-  var filler = '12345678901234567890'
 
-    for (var prefix = 622126; prefix <= 622925; prefix++) {
-      it('has a prefix of ' + prefix + ' and a length of ' + 16, function() {
-        var numb = (prefix.toString()+filler).slice(0,16)
-        detectNetwork(numb).should.equal('China UnionPay')
+  for (let prefix = 622126; prefix <= 622925; prefix++) {
+    it('has a prefix of ' + prefix + ' and a length of ' + 16, function() {
+          var numb = prefix+'1234567890';
+          detectNetwork(numb).should.equal('China UnionPay');
       })
-    }
-    
-    for (var prefix = 622126; prefix <= 622925; prefix++) {
+  }
+   
+  for (let prefix = 622126; prefix <= 622925; prefix++) {
+    it('has a prefix of ' + prefix + ' and a length of ' + 17, function() {
+          var numb = prefix+'12345678901';
+          detectNetwork(numb).should.equal('China UnionPay');
+      })
+  }
+  
+  for (let prefix = 622126; prefix <= 622925; prefix++) {
+    it('has a prefix of ' + prefix + ' and a length of ' + 18, function() {
+          var numb = prefix+'123456789012';
+          detectNetwork(numb).should.equal('China UnionPay');
+      })
+  }
+  
+  for (let prefix = 622126; prefix <= 622925; prefix++) {
+    it('has a prefix of ' + prefix + ' and a length of ' + 19, function() {
+          var numb = prefix+'1234567890123';
+          detectNetwork(numb).should.equal('China UnionPay');
+      })
+  }
+
+  for (let prefix = 624; prefix <= 626; prefix++) {
+    it('has a prefix of ' + prefix + ' and a length of ' + 16, function() {
+      var numb = prefix+'1234567890123'
+      detectNetwork(numb).should.equal('China UnionPay');
+      })
+  }
+  
+  for (let prefix = 624; prefix <= 626; prefix++) {
       it('has a prefix of ' + prefix + ' and a length of ' + 17, function() {
-        var numb = (prefix.toString()+filler).slice(0,17)
+        var numb = prefix+'12345678901234'
         detectNetwork(numb).should.equal('China UnionPay')
       })
     }
     
-    for (var prefix = 622126; prefix <= 622925; prefix++) {
+  for (let prefix = 624; prefix <= 626; prefix++) {
       it('has a prefix of ' + prefix + ' and a length of ' + 18, function() {
-        var numb = (prefix.toString()+filler).slice(0,18)
+        var numb = prefix+'123456789012345'
         detectNetwork(numb).should.equal('China UnionPay')
       })
     }
     
-    for (var prefix = 622126; prefix <= 622925; prefix++) {
+  for (let prefix = 624; prefix <= 626; prefix++) {
       it('has a prefix of ' + prefix + ' and a length of ' + 19, function() {
-        var numb = (prefix.toString()+filler).slice(0,19)
+        var numb = prefix+'1234567890123456'
         detectNetwork(numb).should.equal('China UnionPay')
       })
     }
-    
-    for (var prefix = 624; prefix <= 626; prefix++) {
+  
+  for (let prefix = 6282; prefix <= 6288; prefix++) {
       it('has a prefix of ' + prefix + ' and a length of ' + 16, function() {
-        detectNetwork( (prefix.toString()+filler).slice(0,16)).should.equal('China UnionPay')
+        var numb = prefix+'123456789012'
+        detectNetwork(numb).should.equal('China UnionPay')
       })
     }
     
-    for (var prefix = 624; prefix <= 626; prefix++) {
+    for (let prefix = 6282; prefix <= 6288; prefix++) {
       it('has a prefix of ' + prefix + ' and a length of ' + 17, function() {
-        detectNetwork( (prefix.toString()+filler).slice(0,17)).should.equal('China UnionPay')
+        var numb = prefix+'1234567890123'
+        detectNetwork(numb).should.equal('China UnionPay')
       })
     }
     
-    for (var prefix = 624; prefix <= 626; prefix++) {
+    for (let prefix = 6282; prefix <= 6288; prefix++) {
       it('has a prefix of ' + prefix + ' and a length of ' + 18, function() {
-        detectNetwork( (prefix.toString()+filler).slice(0,18)).should.equal('China UnionPay')
+        var numb = prefix+'12345678901234'
+        detectNetwork(numb).should.equal('China UnionPay')
       })
     }
     
-    for (var prefix = 624; prefix <= 626; prefix++) {
+    for (let prefix = 6282; prefix <= 6288; prefix++) {
       it('has a prefix of ' + prefix + ' and a length of ' + 19, function() {
-        detectNetwork( (prefix.toString()+filler).slice(0,19)).should.equal('China UnionPay')
-      })
-    }
-    
-    
-    for (var prefix = 6282; prefix <= 6288; prefix++) {
-      it('has a prefix of ' + prefix + ' and a length of ' + 16, function() {
-        detectNetwork( (prefix.toString()+filler).slice(0,16)).should.equal('China UnionPay')
-      })
-    }
-    
-    for (var prefix = 6282; prefix <= 6288; prefix++) {
-      it('has a prefix of ' + prefix + ' and a length of ' + 17, function() {
-        detectNetwork( (prefix.toString()+filler).slice(0,17)).should.equal('China UnionPay')
-      })
-    }
-    
-    for (var prefix = 6282; prefix <= 6288; prefix++) {
-      it('has a prefix of ' + prefix + ' and a length of ' + 18, function() {
-        detectNetwork( (prefix.toString()+filler).slice(0,18)).should.equal('China UnionPay')
-      })
-    }
-    
-    for (var prefix = 6282; prefix <= 6288; prefix++) {
-      it('has a prefix of ' + prefix + ' and a length of ' + 19, function() {
-        detectNetwork( (prefix.toString()+filler).slice(0,19)).should.equal('China UnionPay')
+        var numb = prefix+'123456789012345'
+        detectNetwork(numb).should.equal('China UnionPay')
       })
     }
     
@@ -451,7 +457,7 @@ describe('China UnionPay', function() {
 
 describe('Switch', function() {
   var should = chai.should();
-  var filler = '12345678901234567890'
+  //var filler = '12345678901234567890'
   //var switchLengths = [16,18,19]
     
     var prefix = 4903
@@ -568,19 +574,3 @@ describe('Switch', function() {
     
     
 });
-
-
-//China UnionPay always has a prefix of 622126-622925, 624-626, or 6282-6288 and a length of 16-19.
-//Switch always has a prefix of 4903, 4905, 4911, 4936, 564182, 633110, 6333, or 6759 and a length of 16, 18, or 19.
-//Heads up! Switch and Visa seem to have some overlapping card numbers - in any apparent conflict, you should choose the network with the longer prefix.
-
-//3240 successful tests
-
-//622126-622925 = 800
-//624-626 = 3
-//6282-6288 = 7
-
-//length: 16-19 = 4 sets
-
-
-
