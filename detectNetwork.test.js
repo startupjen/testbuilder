@@ -460,116 +460,133 @@ describe('Switch', function() {
   //var filler = '12345678901234567890'
   //var switchLengths = [16,18,19]
     
-    var prefix = 4903
-    
-    it('has a prefix of 4903 and a length of ' + 16, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,16)).should.equal('Switch');
+    it('has a prefix of ' + 4903 + ' and a length of ' + 16, function() {
+        var numb = 4903 +'123456789012'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 4903 and a length of ' + 18, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,18)).should.equal('Switch');
+    it('has a prefix of ' + 4903 + ' and a length of ' + 18, function() {
+        var numb = 4903 +'12345678901234'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 4903 and a length of ' + 19, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,19)).should.equal('Switch');
+    it('has a prefix of ' + 4903 + ' and a length of ' + 19, function() {
+        var numb = 4903 +'123456789012345'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-      prefix = 4905
     
-    it('has a prefix of 4905 and a length of ' + 16, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,16)).should.equal('Switch');
+    it('has a prefix of ' + 4905 + ' and a length of ' + 16, function() {
+        var numb = 4905 +'123456789012'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 4905 and a length of ' + 18, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,18)).should.equal('Switch');
+    it('has a prefix of ' + 4905 + ' and a length of ' + 18, function() {
+        var numb = 4905 +'12345678901234'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 4905 and a length of ' + 19, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,19)).should.equal('Switch');
+    it('has a prefix of ' + 4905 + ' and a length of ' + 19, function() {
+        var numb = 4905 +'123456789012345'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-        prefix = 4911
     
-    it('has a prefix of 4911 and a length of ' + 16, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,16)).should.equal('Switch');
+    it('has a prefix of ' + 4911 + ' and a length of ' + 16, function() {
+        var numb = 4911 +'123456789012'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 4911 and a length of ' + 18, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,18)).should.equal('Switch');
+    it('has a prefix of ' + 4911 + ' and a length of ' + 18, function() {
+        var numb = 4911 +'12345678901234'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 4911 and a length of ' + 19, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,19)).should.equal('Switch');
+    it('has a prefix of ' + 4911 + ' and a length of ' + 19, function() {
+        var numb = 4911 +'123456789012345'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-        prefix = 4936
     
-    it('has a prefix of 4936 and a length of ' + 16, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,16)).should.equal('Switch');
+    it('has a prefix of ' + 4936 + ' and a length of ' + 16, function() {
+        var numb = 4936 +'123456789012'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 4936 and a length of ' + 18, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,18)).should.equal('Switch');
+    it('has a prefix of ' + 4936 + ' and a length of ' + 18, function() {
+        var numb = 4936 +'12345678901234'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 4936 and a length of ' + 19, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,19)).should.equal('Switch');
+    it('has a prefix of ' + 4936 + ' and a length of ' + 19, function() {
+        var numb = 4936 +'123456789012345'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-            prefix = 564182
-    
-    it('has a prefix of 564182 and a length of ' + 16, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,16)).should.equal('Switch');
+      
+    it('has a prefix of ' + 564182 + ' and a length of ' + 16, function() {
+        var numb = 564182 +'1234567890'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 564182 and a length of ' + 18, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,18)).should.equal('Switch');
+    it('has a prefix of ' + 564182 + ' and a length of ' + 18, function() {
+        var numb = 564182+'123456789012'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of 564182 and a length of ' + 19, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,19)).should.equal('Switch');
+    it('has a prefix of ' + 564182 + ' and a length of ' + 19, function() {
+        var numb = 564182+'1234567890123'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-                prefix = 633110
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 16, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,16)).should.equal('Switch');
+    it('has a prefix of ' + 633110 + ' and a length of ' + 16, function() {
+        var numb = 633110+'1234567890'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 18, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,18)).should.equal('Switch');
+    it('has a prefix of ' + 633110 + ' and a length of ' + 18, function() {
+        var numb = 633110+'123456789012'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 19, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,19)).should.equal('Switch');
+    it('has a prefix of ' + 633110 + ' and a length of ' + 19, function() {
+        var numb = 633110+'1234567890123'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-                prefix = 6333
+
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 16, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,16)).should.equal('Switch');
+    it('has a prefix of ' + 6333 + ' and a length of ' + 16, function() {
+        var numb = 6333+'123456789012'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 18, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,18)).should.equal('Switch');
+    it('has a prefix of ' + 6333 + ' and a length of ' + 18, function() {
+        var numb = 6333+'12345678901234'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 19, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,19)).should.equal('Switch');
+    it('has a prefix of ' + 6333 + ' and a length of ' + 19, function() {
+        var numb = 6333+'123456789012345'
+        detectNetwork(numb).should.equal('Switch');
     })
     
                 prefix = 6759
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 16, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,16)).should.equal('Switch');
+    it('has a prefix of ' + 6759 + ' and a length of ' + 16, function() {
+        var numb = 6759+'123456789012'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 18, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,18)).should.equal('Switch');
+    it('has a prefix of ' + 6759 + ' and a length of ' + 18, function() {
+        var numb = 6759+'12345678901234'
+        detectNetwork(numb).should.equal('Switch');
     })
     
-    it('has a prefix of ' + prefix + ' and a length of ' + 19, function() {
-        detectNetwork((prefix.toString()+filler).slice(0,19)).should.equal('Switch');
+    it('has a prefix of ' + 6759 + ' and a length of ' + 19, function() {
+        var numb = 6759+'123456789012345'
+        detectNetwork(numb).should.equal('Switch');
     })
     
     
